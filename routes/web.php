@@ -11,4 +11,4 @@ use Illuminate\Support\Facades\redirect;
 //     Route::get("my/data" , "my_data");
 // });
 
-Route::get('example' , [ExController::class , 'my_data']);
+Route::middleware('auth')->get('example' , [ExController::class , 'my_data']);  
